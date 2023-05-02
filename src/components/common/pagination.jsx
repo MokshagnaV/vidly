@@ -5,6 +5,7 @@ const Pagination = (props) => {
     props;
   let noOfPages = totalItems / pageSize;
   noOfPages = Math.ceil(noOfPages);
+  if (noOfPages < 2) return;
   const pages = _.range(1, noOfPages + 1);
   return (
     <nav>
