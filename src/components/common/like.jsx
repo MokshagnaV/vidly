@@ -1,8 +1,9 @@
 const Like = (props) => {
   return (
     <i
-      className={props.liked ? "fa fa-heart" : "fa fa-heart-o"}
-      style={{ cursor: "pointer" }}
+      className={
+        props.liked ? "clickable fa fa-heart" : "clickable fa fa-heart-o"
+      }
       onClick={props.onLike}
     ></i>
   );
