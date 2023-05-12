@@ -11,24 +11,24 @@ const Pagination = (props) => {
     <nav>
       <ul className="pagination">
         <li className="page-item">
-          <a href="/#" className="page-link" onClick={goPrevPage}>
+          <span className="page-link" onClick={goPrevPage}>
             <i className="fa fa-angle-double-left"></i>
-          </a>
+          </span>
         </li>
         {pages.map((page) => (
           <li
             key={page}
             className={currPage === page ? "page-item active" : "page-item"}
           >
-            <a className="page-link" href="/#" onClick={() => handlePage(page)}>
+            <span className="page-link" onClick={() => handlePage(page)}>
               {page}
-            </a>
+            </span>
           </li>
         ))}
         <li className="page-item">
-          <a href="/#" className="page-link" onClick={goNextPage}>
+          <span className="page-link" onClick={goNextPage}>
             <i className="fa fa-angle-double-right"></i>
-          </a>
+          </span>
         </li>
       </ul>
     </nav>
